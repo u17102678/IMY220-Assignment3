@@ -111,7 +111,7 @@
 					$userId = "SELECT user_id FROM tbUsers WHERE email = '$email'";
 					$result = $mysqli->query($userId);
 
-					// Insert filename
+					// Populate Gallery
 					while ($row = mysqli_fetch_assoc($result)) {
 			      $galleryQuery = "SELECT filename FROM tbgallery WHERE user_id = '{$row["user_id"]}'";
 			      $idResult = $mysqli->query($galleryQuery);
